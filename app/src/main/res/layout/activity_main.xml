@@ -8,6 +8,7 @@
     android:paddingVertical="@dimen/activity_vertical_margin">
 
     <TextView
+        android:gravity="end"
         android:id="@+id/userName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -103,14 +104,31 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonNextQuestion"
-        android:layout_width="match_parent"
+        android:id="@+id/buttonPreviousQuestion"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:background="#FF5722"
-        android:text="Next Question"
+        android:text="Orqaga"
         android:textColor="#ffffff"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonNextQuestion"
         app:layout_constraintTop_toBottomOf="@id/optionsLayout" />
+
+    <Button
+        android:layout_marginStart="5dp"
+        android:id="@+id/buttonNextQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FF5722"
+        android:text="Keyingi"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toEndOf="@id/buttonPreviousQuestion"
+        app:layout_constraintTop_toTopOf="@id/buttonPreviousQuestion"
+        app:layout_constraintBottom_toBottomOf="@id/buttonPreviousQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <Button
         android:id="@+id/buttonQuit"
@@ -118,9 +136,9 @@
         android:layout_height="wrap_content"
        app:layout_constraintTop_toBottomOf="@id/buttonNextQuestion"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="#01579B"
-        android:text="Quit"
+        android:text="Tekshiruvni yakunlash"
         android:textColor="#ffffff" />
 
 
