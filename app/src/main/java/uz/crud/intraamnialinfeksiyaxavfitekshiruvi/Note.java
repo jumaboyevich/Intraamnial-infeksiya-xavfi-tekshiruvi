@@ -10,13 +10,15 @@ public class Note {
     private int questionType;
     private String[] questionOptions;
     private int[] questionOptionsBall;
+    private int[] nextQuestion;
 
-    public Note(int questionId, String questionTitle, int questionType, String[] questionOptions, int[] questionOptionsBall) {
+    public Note(int questionId, String questionTitle, int questionType, String[] questionOptions, int[] questionOptionsBall, int[] nextQuestion) {
         this.questionId = questionId;
         this.questionTitle = questionTitle;
         this.questionType = questionType;
         this.questionOptions = questionOptions;
         this.questionOptionsBall = questionOptionsBall;
+        this.nextQuestion = nextQuestion;
     }
 
     public int getQuestionId() {
@@ -57,5 +59,13 @@ public class Note {
 
     public void setQuestionOptionsBall(int[] questionOptionsBall) {
         this.questionOptionsBall = questionOptionsBall;
+    }
+
+    public int[] getNextQuestion() {
+        return nextQuestion;
+    }
+
+    public void setNextQuestion(int[] nextQuestion) {
+        this.nextQuestion = nextQuestion;
     }
 }
